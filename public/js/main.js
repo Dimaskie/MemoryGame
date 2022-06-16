@@ -26,7 +26,7 @@ function flip(){
                     attempts.innerHTML =0;
                 }
                 else{
-                    alert("Giovana Boca Suja!")
+                    alert("Wrong")
                     
                     attempts.innerHTML++
 
