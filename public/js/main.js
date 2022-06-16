@@ -1,4 +1,10 @@
 const card = document.querySelectorAll('.card')
+let attempts = document.getElementById('attempts')
+
+
+parseInt(attempts,10)
+
+
 
 function flip(){
     let count = 0;
@@ -7,23 +13,33 @@ function flip(){
         card[i].onclick = function(){
             if(count<2){
                 this.style.visibility ='hidden'
-                console.log(clicked)
                 if(count<2){
                 clicked.push(this)
                 }
-                console.log(clicked)
             }
             
             count++
             
             if(count == 2){
-
                 if(clicked[0].className == clicked[1].className){
                     alert("Well Done !")
+                    attempts.innerHTML =0;
                 }
                 else{
-                    alert("Wrong!")
+                    alert("Giovana Boca Suja!")
+                    
+                    attempts.innerHTML++
+
                 }
+                
+                clicked[0].style.visibility ='visible';
+                
+                clicked[1].style.visibility ='visible';
+                
+                count = 0;
+                clicked = [];
+               
+                
             }
         }
     }
